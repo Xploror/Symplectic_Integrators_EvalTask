@@ -19,7 +19,7 @@ T = [10*Tp 100*Tp 1000*Tp 10000*Tp];
 y = zeros([2+int32(T(end)/t_step), 6]);   % x, y, z, px, py, pz
 y(1,4:6) = m*v;
 
-for t=0:t_step:T(end-1)
+for t=0:t_step:T(end)
     k1 = t_step*f(v);
     k2 = t_step*f(v+(k1/2));
     k3 = t_step*f(v+(k2/2));
