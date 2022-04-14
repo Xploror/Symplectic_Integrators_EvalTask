@@ -77,6 +77,8 @@ void DoPri(vector<vector<long double>>& v, vector<vector<long double>>& x, vecto
 
         err_x = sqrt(pow(zx[i][0] - x[i][0], 2) + pow(zx[i][1] - x[i][1], 2) + pow(zx[i][2] - x[i][2], 2));
         err_p = sqrt(pow(zp[i][0] - p[i][0], 2) + pow(zp[i][1] - p[i][1], 2) + pow(zp[i][2] - p[i][2], 2));
+	    
+	// Updating the timestep based on the error 
         if (err_x < eps * sqrt(pow(x[i][0], 2) + pow(x[i][1], 2) + pow(x[i][2], 2)) && err_p < eps * sqrt(pow(p[i][0], 2) + pow(p[i][1], 2) + pow(p[i][2], 2)))
         {
             step = pow((eps * step / (2 * err_x)), 0.25) * step;
