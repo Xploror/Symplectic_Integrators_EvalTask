@@ -26,13 +26,13 @@ int main()
     vector<vector<long double>> x = { {0, 0, 0} };
   
     // Function RK to implement Runge Kutta Order 4  
-    //RK(v, x, p, E, B, step, m, q);
+    RK(v, x, p, E, B, step, m, q);
 
     //Implementing Leapfrog integrator
     //LeapFrog(v, x, p, E, B, step, m, q);
 
     //Implementing DormantPrince Method
-    DoPri(v, x, p, E, B, dopri_step, m, q);
+    //DoPri(v, x, p, E, B, dopri_step, m, q);
     
     // Output position values at each timestep
     for (unsigned int i = 0; i < x.size(); i++)
